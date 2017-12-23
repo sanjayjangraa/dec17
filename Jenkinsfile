@@ -2,7 +2,7 @@
 agent {
         docker { image 'ubuntu:latest' }
     }
-node {
+ubuntu {
 	sh 'echo "`uptime`  and  `date`"'
 	sh 'pwd'
 	sh 'ls -l'
