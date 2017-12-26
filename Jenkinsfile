@@ -1,9 +1,10 @@
-#!/usr/bin/env groovy
-agent {
-        docker { image 'ubuntu:latest' }
+pipeline {
+    agent { docker 'ubuntu:latest' }
+    stages {
+        stage('build') {
+            steps {
+                sh 'uptime'
+            }
+        }
     }
-ubuntu {
-	sh 'echo "`uptime`  and  `date`"'
-	sh 'pwd'
-	sh 'ls -l'
 }
